@@ -5,10 +5,10 @@ namespace CleanArch.Api
 {
     public static class DependencyInjection
     {
-        public static IServiceCollection AddApiDI(this IServiceCollection service)
+        public static IServiceCollection AddApiDI(this IServiceCollection service,IConfiguration configuration)
         {
             service.AddApplicationDI()
-                .AddInfrastructureDI();
+                .AddInfrastructureDI(configuration);
             return service;
         }
     }

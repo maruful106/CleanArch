@@ -2,7 +2,9 @@
 using CleanArch.Infrastructure.Data;
 using CleanArch.Infrastructure.Repository;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.IdentityModel.Protocols;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,11 +15,11 @@ namespace CleanArch.Infrastructure
 {
     public static class DependencyInjection
     {
-        public static IServiceCollection AddInfrastructureDI(this IServiceCollection service)
+        public static IServiceCollection AddInfrastructureDI(this IServiceCollection service,IConfiguration configuration)
         {
             service.AddDbContext<ApplicationDbContext>(options =>
             {
-                options.UseSqlServer("Server=LAPTOP-KCT619UI\\SQLEXPRESS;Database=Test_Db;Integrated Security=True;Connect Timeout=30;Encrypt=True;Trust Server Certificate=True;");
+                options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"));
             });
 
             // add repository DI
