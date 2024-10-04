@@ -13,12 +13,12 @@ namespace CleanArch.Infrastructure.Repository
 {
     public class ProductRepository(ApplicationDbContext dbContext) : IProductRepository
     {
-        public async Task<ProductEntity> AddProductAsync(ProductEntity product)
+        public async Task<Guid> AddProductAsync(ProductEntity product)
         {
             product.Id = Guid.NewGuid();
             dbContext.Products.Add(product);
             await dbContext.SaveChangesAsync();
-            return product;
+            return product.Id;
         }
 
         public async Task<bool> DeleteProductAsync(Guid id)

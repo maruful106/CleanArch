@@ -9,13 +9,13 @@ using System.Threading.Tasks;
 
 namespace CleanArch.Application.Commands
 {
-    public record AddProductCommand(ProductEntity Product):IRequest<ProductEntity>;
+    public record AddProductCommand(ProductEntity Product):IRequest<Guid>;
 
 
     public class AddProductCommandHandler(IProductRepository productRepository)
-        : IRequestHandler<AddProductCommand, ProductEntity>
+        : IRequestHandler<AddProductCommand, Guid>
     {
-        public async Task<ProductEntity> Handle(AddProductCommand request, CancellationToken cancellationToken)
+        public async Task<Guid> Handle(AddProductCommand request, CancellationToken cancellationToken)
         {
             return await productRepository.AddProductAsync(request.Product);
         }

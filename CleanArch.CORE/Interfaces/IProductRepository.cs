@@ -11,7 +11,7 @@ namespace CleanArch.Core.Interfaces
     {
         Task<IEnumerable<ProductEntity>> GetProductsAsync();
         Task<ProductEntity> GetProductByIdAsync(Guid id);
-        Task<ProductEntity> AddProductAsync(ProductEntity product);
+        Task<Guid> AddProductAsync(ProductEntity product);
         Task<ProductEntity> UpdateProductAsync(Guid id, ProductEntity product);
         Task<bool> DeleteProductAsync(Guid id);
     }
