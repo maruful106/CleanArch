@@ -3,13 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35222.181
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArch.Api", "CleanArch.API\CleanArch.Api.csproj", "{68967A0E-1586-40E1-B3CC-A08483D776A6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanArch.Api", "CleanArch.API\CleanArch.Api.csproj", "{68967A0E-1586-40E1-B3CC-A08483D776A6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArch.Application", "CleanArch.APPLICATION\CleanArch.Application.csproj", "{D5BD8D28-B5AE-42ED-A5EA-17C38CC8CE5F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanArch.Application", "CleanArch.APPLICATION\CleanArch.Application.csproj", "{D5BD8D28-B5AE-42ED-A5EA-17C38CC8CE5F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArch.Core", "CleanArch.CORE\CleanArch.Core.csproj", "{D0B193C9-7606-4507-A194-FC15D5DE4DB5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanArch.Core", "CleanArch.CORE\CleanArch.Core.csproj", "{D0B193C9-7606-4507-A194-FC15D5DE4DB5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArch.Infrastructure", "CleanArch.INFRASTRUCTURE\CleanArch.Infrastructure.csproj", "{5D0054A5-400C-42AB-8A08-6A28CA90F5B5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanArch.Infrastructure", "CleanArch.INFRASTRUCTURE\CleanArch.Infrastructure.csproj", "{5D0054A5-400C-42AB-8A08-6A28CA90F5B5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{A73A849C-E423-453D-88A6-F189B44EA2E9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{009B190B-A5C2-4F87-BA69-03083546C060}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -36,6 +40,12 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{68967A0E-1586-40E1-B3CC-A08483D776A6} = {A73A849C-E423-453D-88A6-F189B44EA2E9}
+		{D5BD8D28-B5AE-42ED-A5EA-17C38CC8CE5F} = {A73A849C-E423-453D-88A6-F189B44EA2E9}
+		{D0B193C9-7606-4507-A194-FC15D5DE4DB5} = {A73A849C-E423-453D-88A6-F189B44EA2E9}
+		{5D0054A5-400C-42AB-8A08-6A28CA90F5B5} = {A73A849C-E423-453D-88A6-F189B44EA2E9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2E4403A5-EDE1-4B76-9F6B-5FD609FFC495}
